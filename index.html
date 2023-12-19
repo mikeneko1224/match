@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>マッチ&ゴー</title>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">マッチ&ゴー</a></h1>
+    <ul>
+    <li><button type="button">ログイン</button></li>
+    <li><button type="button">新規登録</button></li>
+    </ul>
+  </header>
+  <main>
+    <article>
+        <section class="main-visual">
+            <img src="./img/logo.png">
+            <h2>君となら、踏み出せる。</h2>
+        </section>
+        <form action="search.php" method="post">
+            <h3>↓行きたいと思ったお店・ライブなどをキーワードにして入力しよう</h3>
+            <div class="hash">
+                <div class="point">#</div>
+                <input type="text" id="name" name="text">
+                <button type="submit">検索</button>
+            </div>
+        </form>
+        <section class="example frame">
+            <p>
+                たとえば、こんなハッシュタグで調べてみよう
+                <ul>
+                    <li>#AKB48</li>
+                    <li>#アナと雪の女王</li>
+                    <li>#MAAYA RESTAURANT</li>
+                </ul>
+            </p>
+        </section>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2023 Match and Go</p>
+  </footer>
+</body>
+
+<style>
+    a,
+    a:visited {
+        color: #24292e;
+        text-decoration: none;
+    }
+
+    body{
+        margin: 0;
+    }
+    header {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 5em;
+        padding: 0 3%;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 30px rgba(100, 100, 100, 0.4);
+        background-attachment: fixed;
+      }
+      
+      header h1{
+        font-weight: 100;
+        font-family: "Arial";
+      }
+      header ul {
+        display: flex;
+        list-style: none;
+        }
+        
+        header li {
+            margin-left: 15px;
+        }
+      .main-visual img{
+        width: 100%;
+        position:relative;
+      }
+      .main-visual h2{
+        position:absolute;
+        top: 10%;
+        left: 60%;
+        color: #f3f7c3;
+      }
+      .search{
+        padding: 0.5em;
+        text-align:center;
+      }
+
+      .hash {
+        display: flex;
+        justify-content:center
+      }
+
+      .point {
+        font-size: 30px;
+      }
+
+      #name{
+        display: inline-block;
+        width: 80%;
+        font-size: 30px;
+      }
+
+      button{
+        font-size: 30px;
+      }
+      article{
+        background-image: url(./img/background.png);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .frame{
+        padding: 2% 5%;
+        margin: 1em;
+        border-radius: 3em;
+        border: grey 0.9px solid;
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      footer {
+        background-color: #24292e;
+        color: #fff;
+        font-size: 0.5rem;
+        padding: 10px 20px;
+        text-align: center;
+      }
+</style>
+
+</html>

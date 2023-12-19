@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+​
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>マッチ&ゴー</title>
+</head>
+​
+<body>
+  <header>
+    <h1><a href="index.html">マッチ&ゴー</a></h1>
+    <div class="user">
+      <p>ようこそRinさん</p>
+      <img src="./img/user-green.png">
+    </div>
+  </header>
+  <main>
+    <article>
+      <section>
+      <div class="head">
+        &#9664;	
+        佐藤さん #野球観戦
+        <div id="humberger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="line-bc">
+        <div class="mycomment">
+          <p>
+          佐藤さん、こんにちは！
+          </p>
+        </div>
+        <div class="balloon6">
+          <div class="faceicon">
+            <img src="./img/user-blue.png">
+          </div>
+          <div class="chatting">
+            <div class="says">
+              <p>こんにちは！Rinさん、はじめまして！</p>
+            </div>
+          </div>
+        </div>
+        <div class="balloon6">
+          <div class="faceicon">
+            <img src="./img/user-blue.png">
+          </div>
+          <div class="chatting">
+            <div class="says">
+              <p>〇〇に行きたかったんですよね～<br>
+                なかまが見つけられて嬉しいです！
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mycomment">
+          <p>
+          私もです！早速ですが次の日曜日はいかがですか？
+          </p>
+        </div>
+        <div class="balloon6">
+          <div class="faceicon">
+            <img src="./img/user-blue.png">
+          </div>
+          <div class="chatting">
+            <div class="says">
+              <p>そうしましょう！気になるメニューありますか？</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="send-message">
+        &#8250;
+        <input type="text" id="name" name="name">
+        <button type="submit">&#8811;</button>
+      </div>
+    </section>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2023 Match and Go</p>
+  </footer>
+</body>
+
+<style>
+    a,
+    a:visited {
+        color: #24292e;
+        text-decoration: none;
+    }
+
+    body{
+        margin: 0;
+    }
+    header {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 5em;
+        padding: 0 3%;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 30px rgba(100, 100, 100, 0.4);
+        background-attachment: fixed;
+      }
+      
+      header h1{
+        font-weight: 100;
+        font-family: "Arial";
+      }
+      .user{
+        display: flex;
+        list-style: none;
+      }
+      header img{
+        max-height: 3em;
+        margin-left: 2em;
+      }
+
+      #name{
+        display: inline-block;
+        width: 80%;
+        font-size: 20px;
+      }
+
+      button{
+        font-size: 20px;
+      }
+      article{
+        background-image: url(./img/background.png);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      article p{
+        padding: 0 5%;
+      }
+      section{
+        max-width: 600px;
+        margin: 15px auto;
+        border: grey 0.9px solid;
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+      .head{
+        padding:1em;
+        background-color: #eeeeee;
+        display: flex;
+        justify-content: space-between;
+      }
+      #humberger {
+        position: relative;
+        height: 20px;
+        width: 28px;
+        margin: 0 0 0 auto;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      #humberger div {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 28px;
+        background-color: #444;
+        border-radius: 2px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      #humberger div:nth-of-type(1) {
+        bottom: 20px;
+      }
+      #humberger div:nth-of-type(2) {
+        bottom: 10px;
+      }
+      #humberger div:nth-of-type(3) {
+        bottom: 0;
+      }
+
+      .line-bc {
+        height: 450px;
+        padding: 20px 10px;
+        text-align: right;
+        font-size: 14px;
+        background-color: skyblue;
+      }
+      
+      .balloon6 {
+        width: 100%;
+        margin: 10px 0;
+        overflow: hidden;
+      }
+      
+      .balloon6 .faceicon {
+        float: left;
+        margin-right: -50px;
+        width: 40px;
+      }
+      
+      .balloon6 .faceicon img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .balloon6 .chatting {
+        width: 100%;
+        text-align: left;
+      }
+      .says {
+        display: inline-block;
+        position: relative; 
+        margin: 0 0 0 50px;
+        padding: 10px;
+        max-width: 250px;
+        border-radius: 12px;
+        background: #edf1ee;
+      }
+      
+      .says:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px; 
+        left: -19px;
+        border: 8px solid transparent;
+        border-right: 18px solid #edf1ee;
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+      }
+      .says p {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .mycomment {
+        margin: 10px 0;
+      }
+      .mycomment p {
+        display: inline-block;
+        position: relative; 
+        margin: 0 10px 0 0;
+        padding: 8px;
+        max-width: 250px;
+        border-radius: 12px;
+        background: #FFFCDB;
+        font-size: 15px;
+      }
+      
+      .mycomment p:after {
+        content: "";
+        position: absolute;
+        top: 3px; 
+        right: -19px;
+        border: 8px solid transparent;
+        border-left: 18px solid #FFFCDB;
+        -webkit-transform: rotate(-35deg);
+        transform: rotate(-35deg);
+      }
+      .send-message{
+        text-align: center;
+        padding: 0.3em;
+      }
+
+      footer {
+        background-color: #24292e;
+        color: #fff;
+        font-size: 0.5rem;
+        padding: 10px 20px;
+        text-align: center;
+      }
+</style>
+
+</html>
