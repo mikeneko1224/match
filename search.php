@@ -1,8 +1,8 @@
 <?php
 try {
-    $dsn = "mysql:host=localhost;";
-    $user = 'root';
-    $password = 'YTsa2545';
+    $dsn = "";
+    $user = '';
+    $password = '';
     $pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::ATTR_EMULATE_PREPARES => false,));
     //echo "成功しました";
 
